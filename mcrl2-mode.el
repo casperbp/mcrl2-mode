@@ -24,7 +24,7 @@
       (let* (
              (x-keywords '("sort" "act" "proc" "init" "struct" "sum" "eqn" "map" "true" "false"))
              (x-types '("Bool" "Nat"))
-             (x-functions '("allow" "comm"))
+             (x-functions '("allow" "comm" "hide"))
 
              (x-keywords-regexp (regexp-opt x-keywords 'words))
              (x-types-regexp (regexp-opt x-types 'words))
