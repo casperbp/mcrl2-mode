@@ -26,9 +26,9 @@
              (x-types '("Bool" "Nat"))
              (x-functions '("allow" "comm" "hide"))
 
-             (x-keywords-regexp (regexp-opt x-keywords 'words))
-             (x-types-regexp (regexp-opt x-types 'words))
-             (x-functions-regexp (regexp-opt x-functions 'words))
+             (x-keywords-regexp (regexp-opt x-keywords 'symbols))
+             (x-types-regexp (regexp-opt x-types 'symbols))
+             (x-functions-regexp (regexp-opt x-functions 'symbols))
              )
         `(
           (,x-keywords-regexp . font-lock-keyword-face)
