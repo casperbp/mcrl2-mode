@@ -24,7 +24,7 @@
       (let* (
              (x-keywords '("sort" "act" "proc" "init" "struct" "sum" "eqn" "map" "true" "false"))
              (x-types '("Bool" "Nat"))
-             (x-functions '("allow" "comm" "hide"))
+             (x-functions '("allow" "comm" "hide" "in"))
 
              (x-keywords-regexp (regexp-opt x-keywords 'symbols))
              (x-types-regexp (regexp-opt x-types 'symbols))
@@ -49,6 +49,7 @@
   (define-key mcrl2-mode-map (kbd "C-c C-l") 'mcrl2-create-lps-reg)
   (define-key mcrl2-mode-map (kbd "C-c C-t") 'mcrl2-create-lts)
   (define-key mcrl2-mode-map (kbd "C-c C-g") 'mcrl2-lts-graph-current)
+  (define-key mcrl2-mode-map (kbd "C-c C-s") 'mcrl2-lts-sim-current)
   )
 
 (progn
@@ -155,3 +156,7 @@
 (defun mcrl2-lts-graph-evidence (&optional set-line)
   (interactive)
   (async-shell-command (concat "ltsgraph "  (shell-quote-argument buffer-file-name) ".pbes.evidence.lts")))
+
+(defun mcrl2-lts-sim-current (&optional set-line)
+  (interactive)
+  (async-shell-command (concat "lpssim " (shell-quote-argument buffer-file-name) ".lps")))
