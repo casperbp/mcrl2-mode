@@ -22,9 +22,9 @@
 
 (setq mcrl2-font-lock-keywords
       (let* (
-             (x-keywords '("sort" "act" "proc" "init" "struct" "sum" "eqn" "map" "true" "false"))
+             (x-keywords '("sort" "act" "proc" "init" "struct" "sum" "eqn" "map" "true" "false" "in"))
              (x-types '("Bool" "Nat"))
-             (x-functions '("allow" "comm" "hide" "in"))
+             (x-functions '("allow" "comm" "hide"))
 
              (x-keywords-regexp (regexp-opt x-keywords 'symbols))
              (x-types-regexp (regexp-opt x-types 'symbols))
