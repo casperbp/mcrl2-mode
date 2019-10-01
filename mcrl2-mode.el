@@ -22,7 +22,8 @@
 
 (setq mcrl2-font-lock-keywords
       (let* (
-             (x-keywords '("sort" "act" "proc" "init" "struct" "sum" "eqn" "map" "true" "false" "in"))
+             (x-keywords '("sort" "act" "proc" "init" "struct" "sum" "eqn" "map"
+                           "in" "mu" "nu"))
              (x-types '("Bool" "Nat"))
              (x-functions '("allow" "comm" "hide"))
 
@@ -32,10 +33,11 @@
              )
         `(
           (,x-keywords-regexp . font-lock-keyword-face)
+          (, "\\(true\\|false\\)[^_]" (1 font-lock-keyword-face))
           (,x-types-regexp . font-lock-type-face)
           (,x-functions-regexp . font-lock-function-name-face)
-          (";\\|:\\|\\.\\|,\\|=\\|+\\|->\\|-[^>]\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&" . font-lock-constant-face)
-          
+          (";\\|:\\|\\.\\|,\\|=\\|+\\|->\\|-\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&" . font-lock-constant-face)
+
           )))
 
 (defconst mcrl2-mode-syntax-table
