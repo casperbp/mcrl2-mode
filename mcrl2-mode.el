@@ -23,7 +23,7 @@
 (setq mcrl2-font-lock-keywords
       (let* (
              (x-keywords '("sort" "act" "proc" "init" "struct" "sum" "eqn" "map"
-                           "in" "mu" "nu"))
+                           "in" "mu" "nu" "forall" "exists"))
              (x-types '("Bool" "Nat"))
              (x-functions '("allow" "comm" "hide"))
 
