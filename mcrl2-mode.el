@@ -33,7 +33,7 @@
              )
         `(
           (,x-keywords-regexp . font-lock-keyword-face)
-          (, "\\(true\\|false\\)[^_]" (1 font-lock-keyword-face))
+          (, "\\(true\\|false\\|lambda\\)[^_]" (1 font-lock-keyword-face))
           (,x-types-regexp . font-lock-type-face)
           (,x-functions-regexp . font-lock-function-name-face)
           (";\\|:\\|\\.\\|,\\|=\\|+\\|->\\|-\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&" . font-lock-constant-face)
