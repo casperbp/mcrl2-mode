@@ -36,7 +36,7 @@
           (, "\\(true\\|false\\|lambda\\)[^_]" (1 font-lock-keyword-face))
           (,x-types-regexp . font-lock-type-face)
           (,x-functions-regexp . font-lock-function-name-face)
-          (";\\|:\\|\\.\\|,\\|=\\|+\\|->\\|-\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&" . font-lock-constant-face)
+          (";\\|:\\|\\.\\|,\\|=\\|+\\|->\\|-\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&\\|&" . font-lock-constant-face)
 
           )))
 
