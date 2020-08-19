@@ -1,11 +1,11 @@
 Emacs Mode for mCRL2
---------------------
+====================
 
 This repository contains a rudimentary Emacs mode for mCRL2, with syntax highlighting and keybindings for calling mCRL2.
 
 
 Installation
-============
+------------
 
 To install the mode, clone this repository into your `~/.emacs.d` folder, and add these files to your Emacs configuration (e.g., `~/.emacs.d/init.el`):
 
@@ -17,7 +17,7 @@ To install the mode, clone this repository into your `~/.emacs.d` folder, and ad
 
 
 Key Bindings
-============
+------------
 
 The mCRL2-mode contains key bindings for compiling and visualizing mCRL2 files:
 
