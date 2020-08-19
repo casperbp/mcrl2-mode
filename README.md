@@ -21,12 +21,15 @@ Key Bindings
 
 The mCRL2-mode contains key bindings for compiling and visualizing mCRL2 files:
 
-* `C-c C-l`: Calls `mcrl22lps`. If the current file is `foo.mcrl2`, this keybinding compiles `foo.mcrl2` to `foo.mcrl2.lps`.
-* `C-c C-t`: Calls `lps2lts`. If the current file is `foo.mcrl2`, this keybinding compiles `foo.mcrl2.lps` to `foo.mcrl2.lts`.
-* `C-c C-g`: Calls `ltsgraph`. If the current file is `foo.mcrl2`, this keybinding displays the transition system graph for `foo.mcrl2.lts`.
-* `C-c C-s`: Calls `lpssim`. If the current file is `foo.mcrl2`, this keybinding simulates `foo.mcrl2.lps`.
+| Key binding | Description |
+|-------------|-------------|
+| `C-c C-l`   | Calls `mcrl22lps`. If the current file is `foo.mcrl2`, this keybinding compiles `foo.mcrl2` to `foo.mcrl2.lps`.
+| `C-c C-t`   | Calls `lps2lts`. If the current file is `foo.mcrl2`, this keybinding compiles `foo.mcrl2.lps` to `foo.mcrl2.lts`. |
+| `C-c C-g`   | Calls `ltsgraph`. If the current file is `foo.mcrl2`, this keybinding displays the transition system graph for `foo.mcrl2.lts`. |
+| `C-c C-s`   | Calls `lpssim`. If the current file is `foo.mcrl2`, this keybinding simulates `foo.mcrl2.lps`. |
 
 The mCF-mode contains key bindings for compiling and verifying mCF files.
 
-* `C-c C-p`: Calls `lps2pbes` and queries the user for a `.lps` file name. If the current file is `bar.mcf`, this keybinding compiles `bar.mcf.pbes`.
-* `C-c C-b`: Calls `pbes2bool`. If the current file is `bar.mcf`, this keybinding verifies the equations in `bar.mcf.pbes`.
+| Key binding | Description |
+| `C-c C-p`   | Calls `lps2pbes` and queries the user for a `.lps` file name. If the current file is `bar.mcf`, this keybinding compiles `bar.mcf.pbes`. |
+| `C-c C-b`   | Calls `pbes2bool`. If the current file is `bar.mcf`, this keybinding verifies the equations in `bar.mcf.pbes`. |
