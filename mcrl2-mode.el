@@ -99,9 +99,11 @@
 (defun mcrl2-get-output-buffer ()
   (if mcrl2-output-buffer
       (if (process-live-p (get-buffer-process mcrl2-output-buffer))
-          (if (y-or-n-p "A process is running in the associated output buffer. Create new associated output buffer?")
-              (setq mcrl2-output-buffer (generate-new-buffer "*mCRL2 Output*"))
-            nil)
+          (progn
+            (display-buffer-use-some-window mcrl2-output-buffer nil)
+            (if (y-or-n-p "A process is running in the associated output buffer. Create new associated output buffer?")
+                (setq mcrl2-output-buffer (generate-new-buffer "*mCRL2 Output*"))
+              nil))
         mcrl2-output-buffer)
     (setq mcrl2-output-buffer (generate-new-buffer "*mCRL2 Output*"))))
 
