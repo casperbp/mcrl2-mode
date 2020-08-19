@@ -31,5 +31,6 @@ The mCRL2-mode contains key bindings for compiling and visualizing mCRL2 files:
 The mCF-mode contains key bindings for compiling and verifying mCF files.
 
 | Key binding | Description |
+|-------------|-------------|
 | `C-c C-p`   | Calls `lps2pbes` and queries the user for a `.lps` file name. If the current file is `bar.mcf`, this keybinding compiles `bar.mcf.pbes`. |
 | `C-c C-b`   | Calls `pbes2bool`. If the current file is `bar.mcf`, this keybinding verifies the equations in `bar.mcf.pbes`. |
