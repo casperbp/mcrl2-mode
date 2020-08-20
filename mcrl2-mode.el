@@ -92,7 +92,8 @@
     (use-local-map mcf-mode-map)
     (run-hooks 'mcrl2-mode-hook)
     (local-set-key (kbd "<backtab>") 'mcrl2-unindent)
-    (setq-local tab-width 2)))
+    (setq-local tab-width 2)
+    (setq-local mcrl2-output-buffer nil)))
 
 (provide 'mcrl2-mode)
 
