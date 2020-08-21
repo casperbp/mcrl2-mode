@@ -1,7 +1,7 @@
 Emacs Mode for mCRL2
 ====================
 
-This repository contains a rudimentary Emacs mode for mCRL2, with syntax highlighting and keybindings for calling mCRL2.
+This repository contains a rudimentary Emacs mode for mCRL2, with syntax highlighting and keybindings for [mCRL2](https://www.mcrl2.org/).
 
 
 Installation
