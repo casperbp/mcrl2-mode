@@ -7,7 +7,7 @@ This repository contains a rudimentary Emacs mode for mCRL2, with syntax highlig
 Installation
 ------------
 
-To install the mode, clone this repository into your `~/.emacs.d` folder, and add these files to your Emacs configuration (e.g., `~/.emacs.d/init.el`):
+To install the mode, clone this repository into your `~/.emacs.d` folder, and add these lines to your Emacs configuration (e.g., `~/.emacs.d/init.el`):
 
 ```
 (load-file "~/.emacs.d/mcrl2-mode/mcrl2-mode.el")

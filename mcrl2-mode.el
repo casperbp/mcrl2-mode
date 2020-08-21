@@ -25,7 +25,7 @@
              (x-keywords '("sort" "act" "proc" "init" "struct"
                            "sum" "eqn" "map" "var"
                            "in" "mu" "nu" "forall" "exists"))
-             (x-types '("Bool" "Nat"))
+             (x-types '("Bool" "Nat" "Int" "Set" "List" "Real" "Pos"))
              (x-functions '("allow" "comm" "hide"))
 
              (x-keywords-regexp (regexp-opt x-keywords 'symbols))
@@ -34,10 +34,10 @@
              )
         `(
           (,x-keywords-regexp . font-lock-keyword-face)
-          (, "\\(true\\|false\\|lambda\\)[^_]" (1 font-lock-keyword-face))
+          (, "\\(true\\|false\\|lambda\\|min\\|max\\|succ\\|pred\\|div\\|mod\\|floor\\|ceil\\|abs\\|exp\\|round\\|Pos2Nat\\|Nat2Pos\\|tau\\)[^_]" (1 font-lock-keyword-face))
           (,x-types-regexp . font-lock-type-face)
           (,x-functions-regexp . font-lock-function-name-face)
-          (";\\|:\\|\\.\\|,\\|=\\|+\\|->\\|-\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&\\|&" . font-lock-constant-face)
+          (";\\|:\\|\\.\\|,\\|=>\\|=\\|+\\|->\\|-\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&\\|&" . font-lock-constant-face)
 
           )))
 
