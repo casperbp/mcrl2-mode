@@ -24,7 +24,7 @@
       (let* (
              (x-keywords '("sort" "act" "proc" "init" "struct"
                            "sum" "eqn" "map" "var"
-                           "in" "mu" "nu" "forall" "exists"))
+                           "in" "mu" "nu" "forall" "exists" "val"))
              (x-types '("Bool" "Nat" "Int" "Set" "List" "Real" "Pos"))
              (x-functions '("allow" "comm" "hide" "rename" "block"))
 
@@ -34,7 +34,7 @@
              )
         `(
           (,x-keywords-regexp . font-lock-keyword-face)
-          (, "[^_a-zA-Z0-9]\\(true\\|false\\|lambda\\|min\\|max\\|succ\\|pred\\|div\\|mod\\|floor\\|ceil\\|abs\\|exp\\|round\\|Pos2Nat\\|Nat2Pos\\|tau\\|delta\\)[^_a-zA-Z0-9]" (1 font-lock-keyword-face))
+          (, "[^_a-zA-Z0-9]\\(true\\|false\\|lambda\\|min\\|max\\|succ\\|pred\\|div\\|mod\\|floor\\|ceil\\|abs\\|exp\\|round\\|Pos2Nat\\|Nat2Pos\\|Int2Nat\\|tau\\|delta\\)[^_a-zA-Z0-9]" (1 font-lock-keyword-face))
           (,x-types-regexp . font-lock-type-face)
           (,x-functions-regexp . font-lock-function-name-face)
           (";\\|:\\|\\.\\|,\\|=>\\|=\\|+\\|->\\|-\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&\\|&" . font-lock-constant-face)
