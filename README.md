@@ -1,7 +1,12 @@
 Emacs Mode for mCRL2
 ====================
 
-This repository contains a rudimentary Emacs mode for mCRL2, with syntax highlighting and keybindings for [mCRL2](https://www.mcrl2.org/).
+This repository contains a rudimentary Emacs mode for [mCRL2](https://www.mcrl2.org/).
+
+Features:
+
+- Syntax highlighting
+- Keybindings for =mcrl22lps=, =lps2lts=, =ltsgraph=, =ltssim=, =lps2pbes=, and =pbes2bool= (see documentation of keybindings below)
 
 
 Installation
