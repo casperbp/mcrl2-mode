@@ -7,7 +7,7 @@ Features
 --------
 
 - Syntax highlighting
-- Keybindings for =mcrl22lps=, =lps2lts=, =ltsgraph=, =ltssim=, =lps2pbes=, and =pbes2bool= (see documentation of keybindings below)
+- Keybindings for `mcrl22lps`, `lps2lts`, `ltsgraph`, `ltssim`, `lps2pbes`, and `pbes2bool` (see documentation of keybindings below)
 
 
 Installation
