@@ -34,10 +34,10 @@
              )
         `(
           (,x-keywords-regexp . font-lock-keyword-face)
-          (, "[^_a-zA-Z0-9]\\(true\\|false\\|lambda\\|min\\|max\\|succ\\|pred\\|div\\|mod\\|floor\\|ceil\\|abs\\|exp\\|round\\|Pos2Nat\\|Nat2Pos\\|Int2Nat\\|tau\\|delta\\)[^_a-zA-Z0-9]" (1 font-lock-keyword-face))
+          (, "\\(\\_<\\|[^_[:word:]]\\)\\(true\\|false\\|lambda\\|min\\|max\\|succ\\|pred\\|div\\|mod\\|floor\\|ceil\\|abs\\|exp\\|round\\|Pos2Nat\\|Nat2Pos\\|Int2Nat\\|Real2Nat\\|tau\\|delta\\)" (2 font-lock-keyword-face))
           (,x-types-regexp . font-lock-type-face)
           (,x-functions-regexp . font-lock-function-name-face)
-          (";\\|:\\|\\.\\|,\\|=>\\|=\\|+\\|->\\|-\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&\\|&" . font-lock-constant-face)
+          (";\\|:\\|\\.\\|,\\|=>\\|=\\|+\\|->\\|-\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&\\|&\\|/" . font-lock-constant-face)
 
           )))
 
@@ -53,6 +53,7 @@
   (define-key mcrl2-mode-map (kbd "C-c C-t") 'mcrl2-create-lts)
   (define-key mcrl2-mode-map (kbd "C-c C-g") 'mcrl2-lts-graph-current)
   (define-key mcrl2-mode-map (kbd "C-c C-s") 'mcrl2-lts-sim-current)
+  (define-key mcrl2-mode-map (kbd "C-c C-i") 'mcrl2-repl-current)
   )
 
 (progn
@@ -185,5 +186,11 @@
 (defun mcrl2-lts-sim-current (&optional set-line)
   (interactive)
   (mcrl2-cmd (concat "lpssim "
+                     (shell-quote-argument buffer-file-name)
+                     ".lps")))
+
+(defun mcrl2-repl-current (&optional set-line)
+  (interactive)
+  (mcrl2-cmd (concat "mcrl2i "
                      (shell-quote-argument buffer-file-name)
                      ".lps")))
