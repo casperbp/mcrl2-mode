@@ -22,6 +22,7 @@
 
 (setq mcrl2-font-lock-keywords
       (let* (
+             (symbols-regex '";\\|:\\|\\.\\|,\\|=>\\|=\\|+\\|->\\|-\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&\\|&\\|/")
              (x-keywords '("sort" "act" "proc" "init" "struct"
                            "sum" "eqn" "map" "var"
                            "in" "mu" "nu" "forall" "exists" "val"))
@@ -34,10 +35,13 @@
              )
         `(
           (,x-keywords-regexp . font-lock-keyword-face)
-          (, "\\(\\_<\\|[^_[:word:]]\\)\\(true\\|false\\|lambda\\|min\\|max\\|succ\\|pred\\|div\\|mod\\|floor\\|ceil\\|abs\\|exp\\|round\\|Pos2Nat\\|Nat2Pos\\|Int2Nat\\|Real2Nat\\|tau\\|delta\\)" (2 font-lock-keyword-face))
+          (, (concat
+              "\\(\\_<\\|[^_[:word:]]\\|\\)\\(true\\|false\\|lambda\\|min\\|max\\|succ\\|pred\\|div\\|mod\\|floor\\|ceil\\|abs\\|exp\\|round\\|Pos2Nat\\|Nat2Pos\\|Int2Nat\\|Real2Nat\\|tau\\|delta\\)\\("
+              symbols-regex
+              "\\|\\_>\\)") (2 font-lock-keyword-face))
           (,x-types-regexp . font-lock-type-face)
           (,x-functions-regexp . font-lock-function-name-face)
-          (";\\|:\\|\\.\\|,\\|=>\\|=\\|+\\|->\\|-\\|*\\|\|\\|!\\|#\\|\<\>\\|(\\|)\\|{\\|}\\|\\[\\|\\]\\|<\\|>\\|&&\\|&\\|/" . font-lock-constant-face)
+          (,symbols-regex . font-lock-constant-face)
 
           )))
 
