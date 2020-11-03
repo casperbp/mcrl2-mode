@@ -154,7 +154,7 @@
 (defun mcf-create-lps-pbes (&optional set-line)
   (interactive)
   (mcrl2-cmd (concat "lps2pbes -c "
-                     (read-file-name "Enter .lps file name:")
+                     (shell-quote-argument (read-file-name "Enter .lps file name:"))
                      " -f " (shell-quote-argument buffer-file-name)
                      " " (shell-quote-argument (concat buffer-file-name ".pbes")) )))
 
