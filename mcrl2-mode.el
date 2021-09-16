@@ -64,6 +64,7 @@
   (setq mcf-mode-map (make-sparse-keymap))
   (define-key mcf-mode-map (kbd "C-c C-p") 'mcf-create-lps-pbes)
   (define-key mcf-mode-map (kbd "C-c C-b") 'mcf-pbes-bool)
+  (define-key mcf-mode-map (kbd "C-c C-s") 'mcf-pbes-solve)
   )
 
 (define-derived-mode mcrl2-mode prog-mode "mCRL2 mode"
@@ -164,15 +165,10 @@
                      (shell-quote-argument buffer-file-name) ".pbes")))
 
 ;; PBES Model Checking Functions
-(defun mcrl2-check-pbes-lps (&optional set-line)
+(defun mcf-pbes-solve (&optional set-line)
   (interactive)
   (mcrl2-cmd (concat "pbessolve -v --file="
-                     (shell-quote-argument (concat buffer-file-name ".lps"))
-                     " "
-                     (shell-quote-argument (concat buffer-file-name ".pbes")) )))
-(defun mcrl2-check-pbes-lts (&optional set-line)
-  (mcrl2-cmd (concat "pbessolve -v --file="
-                     (shell-quote-argument (concat buffer-file-name ".lts"))
+                     (shell-quote-argument (expand-file-name (read-file-name "Enter .lps or .lts file name:")))
                      " "
                      (shell-quote-argument (concat buffer-file-name ".pbes")) )))
 
